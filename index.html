@@ -160,56 +160,86 @@ We train a neural network to predict ERP strength directly from visual scene inf
 
     <h2 class="title is-3">Method and Contributions</h2>
 
-    <div class="columns">
+    <!-- ================= IMAGES (TOP) ================= -->
+    <div class="content has-text-centered scroll-panel">
 
-      <!-- LEFT PANEL -->
-      <div class="column is-half scroll-panel">
-        <div class="content has-text-justified">
-          <p>
-          This study leverages the advantages of event-related potentials (ERPs)...
-          </p>
+      <figure class="image">
+        <img 
+          src="static/images/framework.png"
+          alt="Framework"
+          loading="lazy"
+          style="max-width: 1200px; width: 100%; height: auto;"
+        >
+        <figcaption class="subtitle" style="margin-top:10px;">
+          Overview of the proposed neuro-cognitive reward modeling framework.
+        </figcaption>
+      </figure>
 
-          <p>
-          We collect EEG data from 20 participants...
-          </p>
+      <figure class="image">
+        <img 
+          src="static/images/machine_attention.png"
+          alt="Qualitative result"
+          loading="lazy"
+          style="max-width: 800px; width: 100%; height: auto;"
+        >
+        <figcaption class="subtitle" style="margin-top:10px;">
+          Machine attention visualization across time steps.
+        </figcaption>
+      </figure>
 
-          <p>
-          Unlike traditional RL with EEG feedback...
-          </p>
+      <figure class="image">
+        <img 
+          src="static/images/main_table.png"
+          alt="Quantitative result"
+          loading="lazy"
+          style="max-width: 800px; width: 100%; height: auto;"
+        >
+        <figcaption class="subtitle" style="margin-top:10px;">
+          Summary statistics for driving performance.
+        </figcaption>
+      </figure>
 
-          <h3 class="title is-4">Main Contributions</h3>
+    </div>
 
-          <ul>
-            <li><b>Neuro-cognitive driving dataset.</b> ...</li>
-            <li><b>Human cognitive reward model.</b> ...</li>
-            <li><b>Neuro-cognitive RL framework.</b> ...</li>
-          </ul>
-        </div>
-      </div>
+    <!-- ================= TEXT (BOTTOM) ================= -->
+    <div class="content has-text-justified scroll-panel" style="margin-top: 30px;">
 
-      <!-- RIGHT PANEL -->
-      <div class="column is-half scroll-panel">
+      <p>
+      This study leverages the advantages of event-related potentials (ERPs), specifically their reliable millisecond-level representation of natural brain responses. 
+      It extends classical ERP analysis by exploring the potential of using ERP signals to train reinforcement learning (RL) models for autonomous intelligent vehicle (AIV) tasks.
+      </p>
 
-        <figure class="image">
-          <img src="static/images/framework.png">
-        </figure>
+      <p>
+      We collect EEG data from 20 participants while they actively drive in a realistic VR-based driving simulator. By analyzing their ERP responses to sudden environmental 
+      changes, we observe a correlation between ERP amplitude and driver reaction time. Based on this neuro-cognitive insight, we design a human cognitive reward model 
+      that predicts ERP strength directly from scene images. The predicted ERP signal is then incorporated into the reward function of a reinforcement learning agent.
+      </p>
 
-        <figure class="image">
-          <img src="static/images/machine_attention.png">
-        </figure>
+      <p>
+      Unlike traditional RL with EEG feedback, which requires EEG signals during inference, our approach distills human cognitive responses into a vision-based model. 
+      As a result, the trained RL agent can leverage human cognitive feedback without requiring EEG signals during deployment.
+      </p>
 
-        <figure class="image">
-          <img src="static/images/main_table.png">
-        </figure>
+      <h3 class="title is-4">Main Contributions</h3>
 
-      </div>
+      <ul>
+        <li>
+        <b>Neuro-cognitive driving dataset.</b> A VR-based dataset with EEG, eye-tracking, and driving behavior.
+        </li>
+
+        <li>
+        <b>Human cognitive reward model.</b> Predicts EEG-derived signals from visual input.
+        </li>
+
+        <li>
+        <b>Neuro-cognitive RL framework.</b> Integrates cognitive reward for improved safety and performance.
+        </li>
+      </ul>
 
     </div>
 
   </div>
 </section>
-
-
 
 
 
