@@ -160,100 +160,53 @@ We train a neural network to predict ERP strength directly from visual scene inf
 
     <h2 class="title is-3">Method and Contributions</h2>
 
-    <div class="content has-text-justified">
+    <div class="columns">
 
-      <p>
-      This study leverages the advantages of event-related potentials (ERPs), specifically their reliable millisecond-level representation of natural brain responses. 
-      It extends classical ERP analysis by exploring the potential of using ERP signals to train reinforcement learning (RL) models for autonomous intelligent vehicle (AIV) tasks.
-      </p>
+      <!-- LEFT PANEL -->
+      <div class="column is-half scroll-panel">
+        <div class="content has-text-justified">
+          <p>
+          This study leverages the advantages of event-related potentials (ERPs)...
+          </p>
 
-      <p>
-      We collect EEG data from 20 participants while they actively drive in a realistic VR-based driving simulator. By analyzing their ERP responses to sudden environmental 
-      changes, we observe a correlation between ERP amplitude and driver reaction time. Based on this neuro-cognitive insight, we design a human cognitive reward model 
-      that predicts ERP strength directly from scene images. The predicted ERP signal is then incorporated into the reward function of a reinforcement learning agent.
-      </p>
+          <p>
+          We collect EEG data from 20 participants...
+          </p>
 
-      <p>
-      Unlike traditional RL with EEG feedback, which requires EEG signals during inference, our approach distills human cognitive responses into a vision-based model. 
-      As a result, the trained RL agent can leverage human cognitive feedback without requiring EEG signals during deployment, making the framework more scalable and 
-      practical for real-world autonomous driving systems.
-      </p>
+          <p>
+          Unlike traditional RL with EEG feedback...
+          </p>
 
-      <h3 class="title is-4">Main Contributions</h3>
+          <h3 class="title is-4">Main Contributions</h3>
 
-      <ul>
-        <li>
-        <b>Neuro-cognitive driving dataset.</b> We present a novel dataset collected using a realistic VR driving simulator, capturing driver behavioral signals, 
-        eye-tracking data, EEG recordings, and corresponding scene images.
-        </li>
+          <ul>
+            <li><b>Neuro-cognitive driving dataset.</b> ...</li>
+            <li><b>Human cognitive reward model.</b> ...</li>
+            <li><b>Neuro-cognitive RL framework.</b> ...</li>
+          </ul>
+        </div>
+      </div>
 
-        <li>
-        <b>Human cognitive reward model.</b> We develop a neural model that predicts EEG-derived cognitive signals directly from visual scene inputs.
-        </li>
+      <!-- RIGHT PANEL -->
+      <div class="column is-half scroll-panel">
 
-        <li>
-        <b>Neuro-cognitive RL framework.</b> We propose a reinforcement learning framework that integrates reward signals from the cognitive reward model, 
-        demonstrating improved safety and performance in two challenging autonomous driving scenarios.
-        </li>
-      </ul>
+        <figure class="image">
+          <img src="static/images/framework.png">
+        </figure>
+
+        <figure class="image">
+          <img src="static/images/machine_attention.png">
+        </figure>
+
+        <figure class="image">
+          <img src="static/images/main_table.png">
+        </figure>
+
+      </div>
 
     </div>
 
-<div class="columns is-centered">
-  <div class="column is-full has-text-centered">
-
-    <figure class="image">
-      <img 
-        src="static/images/framework.png"
-        alt="Framework of the proposed neuro-cognitive reinforcement learning system"
-        loading="lazy"
-        style="max-width: 1200px; width: 100%; height: auto;"
-      >
-      <figcaption class="subtitle has-text-centered" style="margin-top:10px;">
-        Overview of the proposed neuro-cognitive reward modeling framework. 
-        EEG signals are used to train a cognitive reward model, which predicts ERP strength from visual scene inputs and provides reward shaping for reinforcement learning.
-      </figcaption>
-    </figure>
-
   </div>
-
-
-  <div class="columns is-centered">
-  <div class="column is-full has-text-centered">
-
-    <figure class="image">
-      <img 
-        src="static/images/machine_attention.png"
-        alt="Qualitative result"
-        loading="lazy"
-        style="max-width: 800px; width: 100%; height: auto;"
-      >
-      <figcaption class="subtitle has-text-centered" style="margin-top:10px;">
-        Machine attention visualization of the policy network of RL across three time steps in the emergency braking scenario. Our model consistently focuses on the lead vehicle.
-      </figcaption>
-    </figure>
-
-  </div>
-
-    <div class="columns is-centered">
-  <div class="column is-full has-text-centered">
-
-    <figure class="image">
-      <img 
-        src="static/images/main_table.png"
-        alt="Quantitative result"
-        loading="lazy"
-        style="max-width: 800px; width: 100%; height: auto;"
-      >
-      <figcaption class="subtitle has-text-centered" style="margin-top:10px;">
-        Summary statistics for Route Completion, Driving Scores, Infraction Scores for emergency braking and left-turn scenario.
-      </figcaption>
-    </figure>
-
-  </div>
-</div>
-</div>
-  
 </section>
 
 
